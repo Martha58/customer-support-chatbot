@@ -1,8 +1,11 @@
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 import sys
 import os
+
+load_dotenv()
 
 # Project Root
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -10,7 +13,7 @@ sys.path.append(PROJECT_ROOT)
 
 from db_model.models import CreateUser
 
-SECRET_KEY = 'secrect'
+SECRET_KEY = os.getenv("SECRECT_KEY")
 ALGORITHM = 'HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
