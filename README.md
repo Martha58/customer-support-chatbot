@@ -178,7 +178,7 @@ Future iterations may replace `InMemorySaver` with a persistent checkpointer (su
 ## Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Martha58/customer-support-chatbot.git
 ```
 
 ## Create a virtual environment
